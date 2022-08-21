@@ -1,0 +1,110 @@
+
+input {
+    outline: none;
+  }
+  .form-none {
+    display: none;
+  }
+  .form-container {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  .form {
+    border: 1px solid #ccca;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    background-color:rgba(138, 142, 151, 0.57);
+    position: relative;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  .form__equis {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 50%;
+  }
+  .form__equis:hover {
+    background-color: #0005;
+    color: white;
+  }
+   
+
+  /* desde aqui form new */
+  .container-form {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+    backdrop-filter: blur(1px);
+  }
+  .container-input {
+    margin-bottom: .5rem;
+  }
+  .container-form form {
+    width: fit-content;
+  }
+  .container-form button {
+    margin-top: .5rem;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: .5rem;
+    border: none;
+    background-color:#35b035;
+    color: #fff;
+    cursor: pointer;
+  }
+  .container-form h2 {
+    margin-bottom: 1rem;
+  }
+  .container-input {
+    margin-bottom: .5rem;
+  }
+  .container-form i {
+    width: 1.5rem;
+  }
+  .input-first-name {
+    margin-right: .3rem;
+  }
+  .container-form input {
+    border: none;
+    padding: 0.5rem;
+    background-color: #eee;
+    border-radius: .5rem;
+  }
+  .container-form input:focus {
+    outline: none;
+  }
+  .input-first-name, .input-last-name {
+    width: 10rem;
+    text-transform: uppercase;
+  }
+  .input-email, .input-password {
+    text-transform: lowercase;
+  }
+  .input-email, .input-password, .input-birthday {
+    width: 21.22rem;
+  }
+  /* 
