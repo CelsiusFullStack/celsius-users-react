@@ -45,8 +45,6 @@ input {
     color: white;
   }
    
-
-  /* desde aqui form new */
   .container-form {
     position: fixed;
     z-index: 100;
@@ -107,4 +105,3 @@ input {
   .input-email, .input-password, .input-birthday {
     width: 21.22rem;
   }
-  /* 
