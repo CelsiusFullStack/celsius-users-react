@@ -14,7 +14,6 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.34.2",
     "react-select": "^5.4.0",
-    "styled-components": "^5.3.5",
     "sweetalert2": "^11.4.28"
   },
   "devDependencies": {
