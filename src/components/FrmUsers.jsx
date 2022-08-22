@@ -79,7 +79,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
         <i className="fa-solid fa-user"></i>
         <input type="text" id='first_name' className='input-first-name' placeholder='first name'
               {...register("first_name", {
-                required: msg.required,
+                required:  {value:true,message: msg.required},
                 minLength: {value: 1, message: msg.min_len},
                 maxLength: {value: 25,message: msg.max_len},
                 pattern:   {value: patterns.valid_name,message: msg.valid_name}
@@ -89,7 +89,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
         
         <input type="text" id='last_name' className='input-last-name'   placeholder='last name'
         {...register("last_name", {
-          required: msg.required,
+          required:  {value:true,message: msg.required},
           minLength: {value: 1, message: msg.min_len},
           maxLength: {value: 25,message: msg.max_len},
           pattern:   {value: patterns.valid_name,message: msg.valid_name}
@@ -104,7 +104,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
         <i className="fa-solid fa-envelope"></i>
         <input type="email" id='email'  className='input-email' placeholder='email' 
         {...register("email", {
-          required: msg.required,
+          required:  {value:true,message: msg.required},
           minLength: {value: 1, message: msg.min_len},
           maxLength: {value: 60, message: msg.max_len},
           pattern:   {value: patterns.email,message: msg.email}
@@ -113,7 +113,14 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
      </div>
      <div className="container-input">
         <i className="fa-solid fa-key"></i>
-        <input type="password" id='password' className='input-password' placeholder='password' {...register("password", { required: true })}/>
+        <input type="password" id='password' className='input-password' placeholder='password'
+           {...register("password", {
+            required:  {value:true,required: msg.required},
+            minLength: {value: 3, message: msg.min_len},
+            maxLength: {value: 8, message: msg.max_len},
+            pattern:   {value: patterns.password,message: msg.password}
+          })}
+        />
     </div>
           <button> { updateInfo ? 'Update User'  : 'Add User' }</button>
     </form>
