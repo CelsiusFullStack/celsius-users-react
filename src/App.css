@@ -28,8 +28,9 @@ p {
   line-height: 21px;
 }
 
-button{
+button {
   cursor: pointer;
+  opacity: 0.6;
 }
 .card_container {
   background-color: #393E41;

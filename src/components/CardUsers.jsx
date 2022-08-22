@@ -50,36 +50,33 @@ const CardUsers = ({ user, getAllUsers, setUpdateInfo, handleOpenForm }) => {
         setUpdateInfo(user)
     }
 return (
-    <div className="card_container">
-    <div class="card">
-    <span className="pro">{`<GalactiCoders/>`}</span>
-    <img className="round" src="https://ayudawp.com/wp-content/uploads/2014/02/usuario-registrado-1024x810.jpg" alt="user" />
     
-    <h3>{user["first_name"]}</h3>
-    <h3>{user["last_name"]}</h3>
-    <h6><i className="fa-solid fa-calendar-days"></i> {user.birthday}</h6>
-    <h6> <i className="fa-solid fa-envelope"></i> {user.email}</h6>
-    <p>Task Api Crud - Academlo</p>
-    <div className="buttons">
-          <button className="danger">
-            Remove
-          </button>
-          <button className="primary">
-            Edit
-          </button>
-    </div>
-    <div className="card__actions">
-        <h6>Action</h6>
-        <div className="select-actions" >
-             <Select
-                defaultValue={{label:'Action',value:'null'}}
-                onChange={handledSelectAction}
-                options={actions}
-              />
+<div className="card_container">
+   
+    <div className="card">
+        <span className="pro">{`<GalactiCoders/>`}</span>
+        <img className="round" src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded400/17303483/17303483-1629225969321-90ade9b86b3c4.jpg" alt="user" />  
+        <h3>{ !user["first_name"] ? user["first_name"]='First Name Null':user["first_name"] }</h3>
+        <h3>{ !user["last_name"] ? user["last_name"]='Last Name Null':user["last_name"] }</h3>
+        <h6><i className="fa-solid fa-calendar-days"></i> {user.birthday}</h6>
+        <h6> <i className="fa-solid fa-envelope"></i> {user.email}</h6>
+        <p>Task Api Crud - Academlo</p>
+        <div className="buttons">
+            <button className="danger">Remove</button>
+            <button className="primary">Edit</button>
+        </div>
+        <div className="card__actions">
+            <h6>Action</h6>
+            <div className="select-actions" >
+                <Select
+                    defaultValue={{label:'Action',value:'null'}}
+                    onChange={handledSelectAction}
+                    options={actions}
+                />
+            </div>
         </div>
     </div>
-    </div>
-       </div>
+</div>
 );
 };
 
