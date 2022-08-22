@@ -30,14 +30,14 @@ p {
 
 button {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .card_container {
   background-color: #393E41;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
   color: #ffffff;
-  padding-top: 30px;
+  padding-top: 5px;
   position: relative;
   width: 300px;
   max-width: 100%;
@@ -56,32 +56,49 @@ button {
   top: 10px;
   left: 10px;
 }
+.academlo-group{
+  color: #393E41;
+  background-color: #44BBA4;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top:10px;
+  position: relative;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 
 .card_container .round {
   border: 1px solid #03BFCB;
+  top: -140px;
   border-radius: 50%;
   padding: 1px;
-  width: 8.5rem;
+  width: 7.0rem;
   aspect-ratio: 1;
 }
 
 button.danger {
   background-color: #d20d0d;
-  border: 1px solid #e8f0f0;
-  border-radius: 3px;
-  color: #efedf6;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
-  padding: 10px 25px;
+  padding: 10px 36px;
 }
 button.primary {
   background-color: #0bb93a;
   border: 1px solid #e8f0f0;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #efedf6;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
-  padding: 10px 25px;
+  padding: 10px 35px;
 }
 
 
@@ -127,7 +144,7 @@ h1 {
   grid-template-rows:  repeat( n,1fr);
   align-content: flex-start;
   row-gap: 20px;
-  column-gap: 5px;
+  column-gap: 8px;
 }
 
 .select-actions{
