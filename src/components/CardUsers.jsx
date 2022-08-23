@@ -73,7 +73,7 @@ return (
 <div className="card_container">
    
     <div className="card">
-        <span className="pro">By Celsius</span>
+        <span className="pro">By C°</span>
         <img className="round" src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded400/17303483/17303483-1629225969321-90ade9b86b3c4.jpg" alt="user" />  
         <h3>{ !user["first_name"] ? user["first_name"]='First Name Null':user["first_name"] }</h3>
         <h3>{ !user["last_name"] ? user["last_name"]='Last Name Null':user["last_name"] }</h3>

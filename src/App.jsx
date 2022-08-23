@@ -16,7 +16,7 @@ function App() {
   }
   useEffect(() => {
     getAllUsers()
-    swal.fire("Information", "Use Button Action for Upatde/Remove and Button Corner Rigth to Refresh User List ", "info") 
+    swal.fire("Information", "Use Button Action for Upatde/Remove, Button Corner Rigth to Refresh User List, View Error Field in console ", "info") 
   }, [])
   const handleRefresh = () => getAllUsers()
   const handleOpenForm = () => setIsFormOpen(true)

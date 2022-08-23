@@ -23,7 +23,6 @@ const msg = {
   email:/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
  };
 
-
 const FrmUsers = ({getAllUsers, updateInfo, setUpdateInfo, handleCloseForm}) => {
   useEffect(() => {
     if(updateInfo){
@@ -85,8 +84,8 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
                 pattern:   {value: patterns.valid_name,message: msg.valid_name}
               })}
         />
-       
-        
+        {errors.first_name && (console.log("First Name Invalid, Content or Length"))}
+
         <input type="text" id='last_name' className='input-last-name'   placeholder='last name'
         {...register("last_name", {
           required:  {value:true,message: msg.required},
@@ -95,6 +94,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
           pattern:   {value: patterns.valid_name,message: msg.valid_name}
         })}
         />
+        {errors.last_name && (console.log("Last Name Invalid, Content or Length"))}
      </div>
      <div className="container-input">
         <i className="fa-solid fa-calendar-days"></i>
@@ -102,14 +102,15 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
     </div>      
      <div className="container-input">
         <i className="fa-solid fa-envelope"></i>
-        <input type="email" id='email'  className='input-email' placeholder='email' 
+        <input type="email" id='email'  className='input-email' placeholder='Electronic Mail' 
         {...register("email", {
           required:  {value:true,message: msg.required},
           minLength: {value: 1, message: msg.min_len},
           maxLength: {value: 60, message: msg.max_len},
           pattern:   {value: patterns.email,message: msg.email}
         })}
-         />
+         /> 
+         {errors.email && (console.log("E-mail, Invalid Format or Length..!"))}
      </div>
      <div className="container-input">
         <i className="fa-solid fa-key"></i>
@@ -121,6 +122,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
             pattern:   {value: patterns.password,message: msg.password}
           })}
         />
+        {errors.password && (console.log("Password, Invalid Format or Length min 3 digits..!"))}
     </div>
           <button> { updateInfo ? 'Update User'  : 'Add User' }</button>
     </form>
