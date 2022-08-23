@@ -12,10 +12,11 @@ const defaultValue = {
 
 const msg = {
   req: "Field is Required..!",
-  valid_name: "Fisrt/Last Name Invalid..!",
-  min_len:"Min. Length Invalid..! ",
-  max_len:"Max. Length Invalid..!",
-  email: "Format e-mail Invalid",
+  valid_fname: "Name Invalid",
+  valid_lname: "Last Name Invalid",
+  min_len:"Min. Length Invalid",
+  max_len:"Max. Length Invalid",
+  email: "Invalid e-mail",
   password: "Debes introducir un número correcto"
  }
  const patterns = { 
@@ -81,20 +82,21 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
                 required:  {value:true,message: msg.required},
                 minLength: {value: 1, message: msg.min_len},
                 maxLength: {value: 25,message: msg.max_len},
-                pattern:   {value: patterns.valid_name,message: msg.valid_name}
+                pattern:   {value: patterns.valid_name,message: msg.valid_fname}
               })}
         />
-        {errors.first_name && (console.log("First Name Invalid, Content or Length"))}
+      
 
         <input type="text" id='last_name' className='input-last-name'   placeholder='last name'
         {...register("last_name", {
           required:  {value:true,message: msg.required},
           minLength: {value: 1, message: msg.min_len},
           maxLength: {value: 25,message: msg.max_len},
-          pattern:   {value: patterns.valid_name,message: msg.valid_name}
+          pattern:   {value: patterns.valid_name,message: msg.valid_lname}
         })}
         />
-        {errors.last_name && (console.log("Last Name Invalid, Content or Length"))}
+        {errors.first_name && <p className='input_err'>{errors.first_name.message}</p>}
+        {errors.last_name && <p className='input_err'>{errors.last_name.message}</p>}
      </div>
      <div className="container-input">
         <i className="fa-solid fa-calendar-days"></i>
@@ -110,7 +112,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
           pattern:   {value: patterns.email,message: msg.email}
         })}
          /> 
-         {errors.email && (console.log("E-mail, Invalid Format or Length..!"))}
+        {errors.email && <p className='input_err'>{errors.email.message}</p>}
      </div>
      <div className="container-input">
         <i className="fa-solid fa-key"></i>
@@ -122,7 +124,7 @@ const letHtmlImg=`<i className='fa-solid fa-user'></i>`;
             pattern:   {value: patterns.password,message: msg.password}
           })}
         />
-        {errors.password && (console.log("Password, Invalid Format or Length min 3 digits..!"))}
+        {errors.password && <p className='input_err'>{errors.password.message}</p>}
     </div>
           <button> { updateInfo ? 'Update User'  : 'Add User' }</button>
     </form>

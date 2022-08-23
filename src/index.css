@@ -105,6 +105,17 @@ input {
   .input-email, .input-password, .input-birthday {
     width: 21.22rem;
   }
+  .input_err{
+    display: flex;
+    position:relative;
+    width: 10rem;
+    padding: 0;
+    margin: 0;
+    top :0px;
+    left:25px;
+    color: red;
+  }
+
   .span-task{
     font-family: 'Roboto';
     font-size: 1.4rem;
